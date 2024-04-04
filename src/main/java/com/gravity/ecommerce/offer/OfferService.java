@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface OfferService {
 
-  OfferResponse getOfferResponse1(List<Integer> priceList);
+  OfferResponse getOfferResponse1(OfferRequest priceList);
 
 }

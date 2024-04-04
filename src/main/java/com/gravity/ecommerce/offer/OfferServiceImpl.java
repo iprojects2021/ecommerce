@@ -13,11 +13,11 @@ import org.springframework.stereotype.Service;
 public class OfferServiceImpl implements OfferService{
 
   @Override
-  public OfferResponse getOfferResponse1(List<Integer> priceList) {
-    if(priceList.size()==0){
+  public OfferResponse getOfferResponse1(OfferResource.OfferRequest request) {
+    if(request.getPriceList().isEmpty()){
       return null;
     }
-    return getOfferResponse(priceList);
+    return getOfferResponse(request.getPriceList());
   }
 
   private OfferResponse getOfferResponse(List<Integer> productList) {

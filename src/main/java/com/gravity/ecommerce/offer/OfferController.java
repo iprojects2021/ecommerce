@@ -18,7 +18,7 @@ public class OfferController {
   OfferService offerService;
 
   @PostMapping("/offer")
-  ResponseEntity<?> getOfferResponse(@RequestBody List<Integer> priceList)throws Exception{
+  ResponseEntity<?> getOfferResponse(@RequestBody OfferRequest priceList)throws Exception{
     OfferResponse response=offerService.getOfferResponse1(priceList);
     if(response==null){
       return ResponseEntity.badRequest().body("Input is Empty");
